@@ -1,7 +1,6 @@
 let links = document.querySelectorAll(".open-popup-link");
 let popupModals = document.querySelectorAll(".popup");
 let closeBtns = document.querySelectorAll(".popup > i");
-let createBtnClose;
 
 /*Клик по ссылке для открытия модального окна*/
 links.forEach(element => {
@@ -9,13 +8,12 @@ links.forEach(element => {
 });
 
 function activePopup() {
-    document.querySelector("body").classList.add("popup-overflow");
     document.getElementById(this.getAttribute("data-src").slice(1)).classList.add("popup-active");
 }
 
 /*Добавление кнопки закрытия окна*/
 popupModals.forEach(element => {
-    createBtnClose = document.createElement("i");
+    let = createBtnClose = document.createElement("i");
     element.prepend(createBtnClose);
     createBtnClose.classList.add("fa", "fa-times");
 });
